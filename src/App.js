@@ -79,6 +79,8 @@ function App() {
       }
       if(mapelem == compelement[compsystem]){
         setText('Draw!');
+        setPlayercount(playercount + 0);
+        setCompcount(compcount + 0);
       }
       else if(weapons[index].wins == compelement[compsystem]){
         setPlayercount(playercount + 1)
