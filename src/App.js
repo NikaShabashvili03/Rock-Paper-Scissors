@@ -30,13 +30,15 @@ function App() {
   const [playercount, setPlayercount] = useState(0);
   const compsystem = Math.floor(Math.random() * 3);
   const [compcount, setCompcount] = useState(0);
-  const [computer, setComputer] = useState();
-  const [clicked, setClicked] = useState();
+  const [computer, setComputer] = useState(3);
+  const [clicked, setClicked] = useState(3);
   const [opacity, setOpacity] = useState('1')
   const items = [
     'https://cdn.pixabay.com/photo/2014/03/25/15/26/rock-paper-scissors-296854_1280.png',
     'https://cdn.pixabay.com/photo/2014/03/25/15/26/rock-paper-scissors-296855_1280.png',
-    'https://cdn.pixabay.com/photo/2014/03/25/15/26/rock-paper-scissors-296853_1280.png' 
+    'https://cdn.pixabay.com/photo/2014/03/25/15/26/rock-paper-scissors-296853_1280.png',
+    // Waiting 
+    'https://icons.veryicon.com/png/o/miscellaneous/decon/wait-4.png',
   ]
   const elements = [
     'Rock',
@@ -61,9 +63,9 @@ function App() {
   ];
   const Refresh = () => {
     setDisabled(false);
-    setComputer()
+    setComputer(3)
     setText('')
-    setClicked()
+    setClicked(3)
     setOpacity('1');
   }
   const HandleClick = (index, mapelem) => {
